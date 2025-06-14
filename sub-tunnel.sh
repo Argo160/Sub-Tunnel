@@ -1,11 +1,10 @@
 #!/bin/bash
-
-# Arguments
-DEST_IP="$1"
-SSH_PASS="$2"
-SRC_PORT="${3:-443}"
-DEST_PORT="${4:-443}"
-SSH_PORT="${5:-22}"
+clear
+read -p "Destination IP: " DEST_IP
+read -p "SSH Password " SSH_PASS
+read -p "Source Port: " SRC_PORT
+read -p "Destination Port: " DEST_PORT
+read -p "SSH Port: " SSH_PORT
 
 # Validate input
 if [[ -z "$DEST_IP" || -z "$SSH_PASS" ]]; then
